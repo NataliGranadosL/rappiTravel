@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: system
+    password: system
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
